@@ -1,10 +1,61 @@
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Css et Sass/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <title>Ohmyfood</title>
 </head>
+
 <body>
-    
+    <div class="main-container">
+        <header>
+            <nav class="logo">
+                <img src="images/logo/ohmyfood@2x.svg" alt="logo-Ohmyfood" class="logo-mobile">
+                <img src="images/logo/ohmyfood.png" alt="logo-Ohmyfood" class="logo-desktop">
+            </nav>
+        </header>
+        
+        <main>
+            <section>
+                <form class="formulaire--barre-recherche" action="#" method="post">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <label for="site-search"> </label>
+                    <input class="formulaire--barre-recherche--ville" type="search" value="Paris, Belleville" id="site-search" name= "rechercher la ville">
+                </form>
+            </section>
+
+            <section class="En-tête">
+                <div class="En-tête__titre-texte">
+                    <h1> Réservez le menu qui vous convient</h1>
+                </div>
+                <div class="En-tête__titre-texte">
+                    <p> Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                </div>
+                <div class="En-tête__btn">
+                <button class="btn"> Explorer nos restaurants </button>
+                </div>
+            </section>
+
+
+            <section class="Fonctionnement">
+                <div class="Fonctionnement__titre">
+                    <h1>Fonctionnement</h1>
+                </div>
+                <button class="Fonctionnement__btn"> Choisissez un restaurant</button>
+                <button> Composez votre menu</button>
+                <button> Dégustez au restaurants</button>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

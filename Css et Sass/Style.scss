@@ -1,0 +1,107 @@
+:root {
+  --main-color: #9356DC; /* primaire(--main-color) */
+  --second-color: #FF79DA; /* secondaire(--second-color) */
+  --green-color: #99E2D0; /* vert(--green-color) */
+  --formulaire-color:#EAEAEA; /* gris foncé*/
+  --title-color: #F6F6F6; /* gris clair */
+
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'srilanka', sans-serif;
+}
+
+
+body{
+  margin: 0px;
+}
+.main-container {
+
+    min-width: 320px;
+    width: 100%;
+    margin: 0px;
+}
+
+    
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+    
+  .logo-desktop {
+    display: none;
+  }
+    
+  @media (min-width: 768px) {
+    .logo-desktop {
+      display: inline;
+    }
+    .logo-mobile {
+      display: none;
+    }
+  }
+}
+    
+.formulaire--barre-recherche {
+    display: flex;
+    background-color: var(--formulaire-color);
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+
+    &--ville {
+      border: none;
+      background-color: var(--formulaire-color);
+    }
+  }
+
+
+.En-tête {
+  padding-top: 20px;
+  background-color: var(--title-color);
+
+  .En-tête__titre-texte {
+    display: flex;
+    text-align: center;
+    word-wrap:break-word;
+    width: 100%;
+  }
+
+  .En-tête__btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    
+
+
+    .btn {
+      border-radius: 25px,;
+      padding: 16px 25px;
+      background: linear-gradient(var(--main-color),var(--second-color));
+      color: white;
+      text-align: center;
+      font-family: 'roboto', sans-serif;
+      border: none;
+    }
+   
+  }
+
+  @media (min-width: 768px) {
+    .En-tête__titre-texte {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+.Fonctionnenment{
+
+  
+}
+}
