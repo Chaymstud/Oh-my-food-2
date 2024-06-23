@@ -34,27 +34,103 @@
                 </form>
             </section>
 
-            <section class="En-tête">
-                <div class="En-tête__titre-texte">
-                    <h1> Réservez le menu qui vous convient</h1>
-                </div>
-                <div class="En-tête__titre-texte">
-                    <p> Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                </div>
-                <div class="En-tête__btn">
-                <button class="btn"> Explorer nos restaurants </button>
-                </div>
+
+            <section class="Reservation">
+
+                <h1 class="Reservation-title"> Réservez le menu qui vous convient</h1>
+                <p class="Reservation-txt"> Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
+                <div class="Reservation-btn">
+                    <button class="btn" onclick="location.href='#Restaurants'"> Explorer nos restaurants </button>
+                </div>          
             </section>
 
 
             <section class="Fonctionnement">
-                <div class="Fonctionnement__titre">
-                    <h1>Fonctionnement</h1>
+                <h2>Fonctionnement</h2>
+                <div class="Fonctionnement__liste">
+                    <ol class="liste">
+                        <li class="__btn"> <div class="btn-number"> 1 </div> <i class="fa-solid fa-mobile-screen-button" style="color: #7E7E7E;"></i> Choisissez un restaurant</li>
+                        <li class="__btn"> <div class="btn-number"> 2 </div> <i class="fa-solid fa-list-ul" style="color: #7E7E7E;"></i> Composez votre menu</li>
+                        <li class="__btn"> <div class="btn-number"> 3 </div> <i class="fa-solid fa-store" style="color: #9356DC;"></i> Dégustez au restaurant</li>
+                    </ol>
                 </div>
-                <button class="Fonctionnement__btn"> Choisissez un restaurant</button>
-                <button> Composez votre menu</button>
-                <button> Dégustez au restaurants</button>
             </section>
+
+            <section class="Restaurants" >
+                <div class="Restaurants-content">
+                    <h2 id="Restaurants"> Restaurants</h2>
+                    <div class="Restaurants-cards">
+                        <article class="card">
+                            <a href="restaurants/menu1.html">
+                                <div class="card-new">
+                                    <p>Nouveau</p>
+                                </div>
+                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="assiette La palette du goût">
+                                <div class="card-contenant">
+                                    <div class="card-txt">
+                                        <h3> La palette du goût</h3>
+                                        <p>Ménilmontant</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="card-heart">
+                                <span>
+                                    <i class="far fa-heart hoverheart__content-light fa-regular"></i>
+                                    <i class="fas fa-heart hoverheart__content-solid fa-solid"></i>
+                                </span>
+                        
+                            </div>
+                        </article>
+                   
+                        <article class="card">
+                            <a href="restaurants/menu2.html">
+                                <div class="card-new">
+                                    <p>Nouveau</p>
+                                </div>
+                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="assiette La note enchantée">
+                                <div class="card-contenant">
+                                    <div class="card-txt">
+                                        <h3> La note enchantée</h3>
+                                        <p>Charonne</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        
+                        <article class="card">
+                            <a href="restaurants/menu3.html">
+                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="assiette À la française">
+                                <div class="card-contenant">
+                                    <div class="card-txt">
+                                        <h3> À la française</h3>
+                                        <p>Cité Rouge</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="restaurants/menu4.html">
+                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="assiette Le délice des sens">
+                                <div class="card-contenant">
+                                    <div class="card-txt">
+                                        <h3> Le délice des sens</h3>
+                                        <p>Folie-Méricourt</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div> 
+                </div>
+            </section>
+            <footer>
+                <h3 class="footer-logo"> Ohmyfood</h3>
+                <ul class="footer-complet">
+                    <li> <i class="fa-solid fa-utensils" style="color: #ffffff;"></i><a href="#">Proposer un restaurant</a></li>    
+                    <li> <i class="fa-solid fa-handshake-angle" style="color: #ffffff;"></i><a href="#"> partenaire </a></li>   
+                    <li class="__mention"> <a href="#">Mentions légales</a></li>                 
+                    <li> <a href="#"> Contact </a></li>
+                </ul>
+          </footer>
         </main>
     </div>
 </body>

@@ -7,9 +7,9 @@
   --title-color: #F6F6F6; /* gris clair */
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-  font-family: "srilanka", sans-serif;
+:root {
+  --police-principale:"Roboto", sans-serif;
+  --police-logo-titre:"shrikhand", sans-serif;
 }
 
 body {
@@ -17,7 +17,6 @@ body {
 }
 
 .main-container {
-  min-width: 320px;
   width: 100%;
   margin: 0px;
 }
@@ -31,12 +30,12 @@ body {
 .logo .logo-desktop {
   display: none;
 }
-@media (min-width: 768px) {
-  .logo .logo-desktop {
-    display: inline;
-  }
+@media (min-width: 1024px) {
   .logo .logo-mobile {
     display: none;
+  }
+  .logo .logo-desktop {
+    display: inline;
   }
 }
 
@@ -49,40 +48,286 @@ body {
   justify-content: center;
   gap: 10px;
   margin: 0;
+  box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
 }
 .formulaire--barre-recherche--ville {
   border: none;
   background-color: var(--formulaire-color);
 }
+@media (min-width: 1024px) {
+  .formulaire--barre-recherche {
+    box-shadow: none;
+  }
+}
 
-.En-tête {
-  padding-top: 20px;
-  background-color: var(--title-color);
-}
-.En-tête .En-tête__titre-texte {
+.Reservation {
   display: flex;
-  text-align: center;
-  word-wrap: break-word;
-  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--title-color);
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.En-tête .En-tête__btn {
+@media (min-width: 1024px) {
+  .Reservation {
+    box-shadow: none;
+  }
+}
+.Reservation .Reservation-title {
+  font-family: var(--police-principale);
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+}
+.Reservation .Reservation-txt {
+  font-family: var(--police-principale);
+  font-weight: 100;
+  text-align: center;
+  margin-top: 0px;
+}
+.Reservation-btn {
   display: flex;
   justify-content: center;
   padding-bottom: 40px;
-  padding-top: 40px;
+  padding-top: 10px;
 }
-.En-tête .En-tête__btn .btn {
+.Reservation-btn .btn {
   border-radius: 25px;
   padding: 16px 25px;
   background: linear-gradient(var(--main-color), var(--second-color));
   color: white;
   text-align: center;
-  font-family: "roboto", sans-serif;
   border: none;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
 }
-@media (min-width: 768px) {
-  .En-tête .En-tête__titre-texte {
-    justify-content: center;
-    width: 100%;
+
+.Fonctionnement {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: column;
+  font-family: var(--police-principale);
+}
+@media (min-width: 1024px) {
+  .Fonctionnement {
+    padding: 40px 50px 50px 300px;
   }
+}
+.Fonctionnement .Fonctionnement__liste {
+  position: relative;
+  flex: 1;
+}
+@media (min-width: 1024px) {
+  .Fonctionnement .Fonctionnement__liste {
+    justify-content: space-between;
+  }
+}
+.Fonctionnement .Fonctionnement__liste .liste {
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+}
+@media (min-width: 1024px) {
+  .Fonctionnement .Fonctionnement__liste .liste {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+}
+.Fonctionnement .Fonctionnement__liste .liste .__btn {
+  display: flex;
+  font-family: var(--police-principale);
+  position: relative;
+  border-radius: 20px;
+  padding: 20px 20px 20px 10px;
+  width: 90%;
+  border: none;
+  gap: 25px;
+  background-color: var(--title-color);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 1024px) {
+  .Fonctionnement .Fonctionnement__liste .liste .__btn {
+    padding: 29px 38px 28px 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 20%;
+  }
+}
+.Fonctionnement .Fonctionnement__liste .liste .btn-number {
+  display: flex;
+  font-size: 14px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -12px;
+  z-index: 1;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 40px;
+}
+
+.Restaurants {
+  display: flex;
+  background-color: var(--title-color);
+  padding: 20px;
+  padding-bottom: 50px;
+  font-family: var(--police-principale);
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .Restaurants {
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 30px 0;
+  }
+}
+.Restaurants .Restaurants-content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .Restaurants .Restaurants-content {
+    gap: 50px;
+    align-items: center;
+    width: 80%;
+  }
+  .Restaurants .Restaurants-content h2 {
+    align-self: flex-start;
+  }
+}
+.Restaurants .Restaurants-content .Restaurants-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .Restaurants .Restaurants-content .Restaurants-cards {
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    flex-basis: 100%;
+  }
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card a {
+  text-decoration: none;
+  color: black;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-new {
+  display: flex;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  font-family: var(--police-principale);
+  font-size: 0.875rem;
+  width: 5rem;
+  height: 29px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 1;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+  /* pour rogner les images clip-path: inset(40px 0px 0px 0px);*/
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-contenant {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 10px 0px 10px;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-txt {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 85%;
+  height: auto;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-txt h3 {
+  margin: 15px 0px 0px 2px;
+  font-family: var(--police-principale);
+  font-size: 15px;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-txt p {
+  margin: 5px 2px 15px 2px;
+  font-family: var(--police-principale);
+  font-weight: 180;
+  font-size: 14px;
+}
+footer {
+  padding: 10px 0px 10px 0px;
+  background-color: #353535;
+}
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-top: 50px;
+  }
+}
+footer .footer-logo {
+  font-family: var(--police-logo-titre);
+  color: white;
+  font-size: 19px;
+  list-style: none;
+  padding-left: 40px;
+}
+@media (min-width: 1024px) {
+  footer .footer-logo {
+    padding-left: 80px;
+    padding-right: 70px;
+  }
+}
+footer .footer-complet {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 17px;
+  font-family: var(--police-principale);
+  list-style: none;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  footer .footer-complet {
+    flex-direction: row;
+    gap: 19px;
+  }
+}
+footer .footer-complet li {
+  display: flex;
+  gap: 18px;
+}
+@media (min-width: 1024px) {
+  footer .footer-complet .__mention {
+    padding-left: 49px;
+  }
+}
+footer .footer-complet a {
+  text-decoration: none;
+  color: white;
+}
+footer .footer-complet .fa-handshake-angle {
+  width: 13px;
 }/*# sourceMappingURL=Style.css.map */
