@@ -17,7 +17,6 @@ body {
 }
 
 .main-container {
-  width: 100%;
   margin: 0px;
 }
 
@@ -109,7 +108,7 @@ body {
 }
 @media (min-width: 1024px) {
   .Fonctionnement {
-    padding: 40px 50px 50px 300px;
+    padding: 50px 140px 80px;
   }
 }
 .Fonctionnement .Fonctionnement__liste {
@@ -133,6 +132,10 @@ body {
     align-items: center;
   }
 }
+.Fonctionnement .Fonctionnement__liste .liste .li {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .Fonctionnement .Fonctionnement__liste .liste .__btn {
   display: flex;
   font-family: var(--police-principale);
@@ -150,10 +153,9 @@ body {
 }
 @media (min-width: 1024px) {
   .Fonctionnement .Fonctionnement__liste .liste .__btn {
-    padding: 29px 38px 28px 20px;
     align-items: center;
     flex-wrap: nowrap;
-    width: 20%;
+    width: 100%;
   }
 }
 .Fonctionnement .Fonctionnement__liste .liste .btn-number {
@@ -172,32 +174,22 @@ body {
 }
 
 .Restaurants {
-  display: flex;
   background-color: var(--title-color);
-  padding: 20px;
-  padding-bottom: 50px;
   font-family: var(--police-principale);
-  flex-direction: column;
-}
-@media (min-width: 1024px) {
-  .Restaurants {
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0 30px 0;
-  }
+  width: 100%;
 }
 .Restaurants .Restaurants-content {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 @media (min-width: 1024px) {
   .Restaurants .Restaurants-content {
     gap: 50px;
-    align-items: center;
-    width: 80%;
+    margin: 55px 140px 65px;
   }
   .Restaurants .Restaurants-content h2 {
-    align-self: flex-start;
+    font-family: var(--police-principale);
   }
 }
 .Restaurants .Restaurants-content .Restaurants-cards {
@@ -210,7 +202,6 @@ body {
   .Restaurants .Restaurants-content .Restaurants-cards {
     flex-direction: row;
     gap: 50px;
-    align-items: center;
     flex-basis: 100%;
   }
 }

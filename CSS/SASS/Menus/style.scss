@@ -1,0 +1,108 @@
+
+/* Feuille de style des menus*/
+
+:root {
+    --main-color: #9356DC; /* primaire(--main-color) */
+    --second-color: #FF79DA; /* secondaire(--second-color) */
+    --green-color: #99E2D0; /* vert(--green-color) */
+    --formulaire-color:#EAEAEA; /* gris foncé*/
+    --title-color: #F6F6F6; /* gris clair */
+  
+  }
+  
+  :root {
+    --police-principale :'Roboto', sans-serif;
+    --police-logo-titre :'shrikhand', sans-serif;
+  }
+  
+  body {
+    margin: 0px;
+    
+  }
+  
+  .main-container {
+    margin: 0px;
+  }
+      
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .logos-mobile{
+      display: inline;
+      @media (min-width:1024px){
+        display: none;
+      }
+    }
+  
+    .logos-desktop{
+      display: none;
+      @media (min-width: 1024px) {
+        display: inline;
+      }
+    }
+  }
+
+footer {
+    padding: 10px 0px 10px 0px;
+    background-color: #353535;
+  
+    @media (min-width: 1024px) {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      padding-top: 50px;
+    }
+    
+  
+    .footer-logo {
+      font-family: var(--police-logo-titre);
+      color: white;
+      font-size: 19px;
+      list-style: none;
+      padding-left: 40px;
+  
+      @media (min-width: 1024px) {
+        padding-left: 80px;
+        padding-right: 70px;
+      }
+    }
+  
+    .footer-complet {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 17px;
+      font-family: var(--police-principale);
+      list-style: none;
+      font-weight: 500;
+  
+        @media (min-width: 1024px) {
+          flex-direction: row;
+          gap: 19px; 
+        }
+  
+        li{
+          display: flex;
+          gap: 18px;
+        }
+  
+        .__mention {
+          @media (min-width:1024px){
+            padding-left: 49px;
+          }
+        }
+       
+        a {
+          text-decoration: none;
+          color: white;
+        }
+  
+        .fa-handshake-angle {
+          width: 13px;
+        }
+      }
+    }
