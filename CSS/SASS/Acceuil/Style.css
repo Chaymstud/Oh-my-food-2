@@ -172,6 +172,12 @@ body {
   background-color: var(--main-color);
   border-radius: 40px;
 }
+.Fonctionnement .Fonctionnement__liste .liste .hover-violet {
+  color: grey;
+}
+.Fonctionnement .Fonctionnement__liste .liste .hover-violet:hover {
+  color: var(--main-color);
+}
 
 .Restaurants {
   background-color: var(--title-color);
@@ -244,9 +250,42 @@ body {
 }
 .Restaurants .Restaurants-content .Restaurants-cards .card-contenant {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 0px 10px 0px 10px;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-contenant .card-heart {
+  height: 2rem;
+  width: 2rem;
+  padding: 15px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-contenant .card-heart .icon-empty {
+  opacity: 1;
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.2s linear;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-contenant .card-heart .icon-fill {
+  opacity: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.2s linear;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-contenant .card-heart:hover .icon-fill {
+  opacity: 1;
+}
+.Restaurants .Restaurants-content .Restaurants-cards .card-contenant .card-heart:hover .icon-empty {
+  opacity: 0;
 }
 .Restaurants .Restaurants-content .Restaurants-cards .card-txt {
   display: flex;
@@ -266,6 +305,7 @@ body {
   font-weight: 180;
   font-size: 14px;
 }
+
 footer {
   padding: 10px 0px 10px 0px;
   background-color: #353535;

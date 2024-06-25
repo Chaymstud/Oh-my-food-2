@@ -185,6 +185,12 @@ body{
         background-color: var(--main-color);
         border-radius: 40px;
       }
+      .hover-violet {
+        color: grey;
+      }
+      .hover-violet:hover{
+        color: var(--main-color);
+      }
     } 
   }
 }
@@ -264,8 +270,49 @@ body{
       .card-contenant {
         display: flex;
         justify-content: space-between;
-        
         padding: 0px 10px 0px 10px;
+
+        .card-heart {
+          height: 2rem;
+          width: 2rem;
+          padding: 15px;
+          display: inline-block;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+      
+
+        .icon-empty {
+          opacity: 1;
+          font-size: 1.6rem;
+          cursor: pointer;  
+          position: absolute;
+          transition: 0.2s linear;
+        }
+
+        .icon-fill {
+          opacity: 0;
+          font-size: 1.6rem;
+          cursor: pointer;
+          position: absolute;
+          z-index: 2;
+          background: linear-gradient(0deg, #ab5edc 0%, #df6fda 58%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: 0.2s linear;  
+
+        }
+
+
+&:hover .icon-fill{
+    opacity: 1;
+}
+
+&:hover .icon-empty{
+    opacity: 0;
+}
+      }
       }
 
       .card-txt{
@@ -287,14 +334,6 @@ body{
           font-family: var(--police-principale);
           font-weight: 180;
           font-size: 14px;
-        }
-      }
-
-      .card-heart {
-
-        .heart-content {
-
-
         }
       }
     }
