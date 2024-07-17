@@ -233,7 +233,7 @@ body {
   transform: translateX(0);
 }
 .main .cards-menus .card-menu .card-content .hover-check:hover {
-  left: 0%;
+  left: 0px;
 }
 .main .cards-menus .card-menu .card-content .hover-check .price {
   display: flex;
