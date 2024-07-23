@@ -162,16 +162,16 @@ body {
   }
 }
 .main .cards-menus:first-child {
-  animation-duration: 2s;
-  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-delay: 2s;
 }
 .main .cards-menus:nth-child(2) {
-  animation-duration: 3s;
-  animation-delay: 0, 3s;
+  animation-duration: 2s;
+  animation-delay: 1s;
 }
-.main .cards-menus:last-child(2) {
+.main .cards-menus:last-child {
   animation-duration: 3s;
-  animation-delay: 0, 3s;
+  animation-delay: 1s;
 }
 .main .cards-menus .card-menu {
   display: flex;

@@ -175,16 +175,16 @@ body {
     } 
 
     &:first-child{
-      animation-duration: 2s;
-      animation-delay: 0s;
+      animation-duration: 1s;
+      animation-delay: 2s;
     }
     &:nth-child(2){
-      animation-duration: 3s;
-      animation-delay: 0,3s;
+      animation-duration: 2s;
+      animation-delay: 1s;
     }
-    &:last-child(2){
+    &:last-child{
       animation-duration: 3s;
-      animation-delay: 0,3s;
+      animation-delay: 1s;
     }
 
     .card-menu{
