@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Feuille de style des menus*/
+/***Couleurs***/
 :root {
   --main-color: #9356DC; /* primaire(--main-color) */
   --second-color: #FF79DA; /* secondaire(--second-color) */
@@ -8,27 +9,24 @@
   --title-color: #F6F6F6; /* gris clair */
 }
 
+/****Police****/
 :root {
   --police-principale:"Roboto", sans-serif;
   --police-logo-titre:"shrikhand", sans-serif;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(-540deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes apparition-card {
+/****Animation escalier***/
+@keyframes transition {
   0% {
     opacity: 0;
-    transform: translateY(1.6rem);
+    margin-left: -20px;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    margin-left: 13px;
   }
 }
 body {
@@ -80,6 +78,7 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
+  /**Image de fond menu**/
 }
 .main .img-menu img {
   width: 100%;
@@ -149,8 +148,11 @@ body {
   opacity: 0;
 }
 .main .cards-menus {
-  animation: apparition-card;
+  animation: transition 1.5s ease-out 0.5s forwards;
+  opacity: 0;
   width: 100%;
+  /**Animation escalier pour les plats**/
+  /**Animation escalier pour les desserts**/
 }
 @media (min-width: 1024px) {
   .main .cards-menus {
@@ -160,18 +162,6 @@ body {
     width: 60%;
     font-family: var(--police-principale);
   }
-}
-.main .cards-menus:first-child {
-  animation-duration: 1s;
-  animation-delay: 2s;
-}
-.main .cards-menus:nth-child(2) {
-  animation-duration: 2s;
-  animation-delay: 1s;
-}
-.main .cards-menus:last-child {
-  animation-duration: 3s;
-  animation-delay: 1s;
 }
 .main .cards-menus .card-menu {
   display: flex;
@@ -191,54 +181,60 @@ body {
 }
 .main .cards-menus .card-menu .card-content {
   width: 100%;
+  height: 69px;
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
+  gap: 55px;
+  overflow: hidden;
+  margin-right: -60px;
+}
+.main .cards-menus .card-menu .card-content:hover .card2 {
+  transform: translateX(-60px);
+  transition: transform 0.8s ease-in;
+  cursor: pointer;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.main .cards-menus .card-menu .card-content .card1 {
   overflow: hidden;
 }
-.main .cards-menus .card-menu .card-content:hover {
-  cursor: pointer;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
-}
-.main .cards-menus .card-menu .card-content .__txt {
+.main .cards-menus .card-menu .card-content .card1 .__txt {
   padding: 12px 18px 12px 10px;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main .cards-menus .card-menu .card-content .__txt h4 {
+.main .cards-menus .card-menu .card-content .card1 .__txt h4 {
   margin: 0;
 }
-.main .cards-menus .card-menu .card-content .__txt .__coupe {
+.main .cards-menus .card-menu .card-content .card1 .__txt .__coupe {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main .cards-menus .card-menu .card-content .__txt p {
+.main .cards-menus .card-menu .card-content .card1 .__txt p {
   margin: 0;
   padding-top: 10px;
   font-weight: 300;
 }
-.main .cards-menus .card-menu .card-content .hover-check {
+.main .cards-menus .card-menu .card-content .card2 {
   display: flex;
-  align-items: center;
-  position: relative;
-  left: 70px;
-  transform-origin: right;
-  transition: all 450ms ease;
+  gap: 10px;
+  align-items: flex-end;
+  margin-right: -60px;
+}
+.main .cards-menus .card-menu .card-content .card2 .card-content:not(:hover) .card2 {
   transform: translateX(0);
+  transition: transform 0.8s ease-in;
 }
-.main .cards-menus .card-menu .card-content .hover-check:hover {
-  left: 0px;
-}
-.main .cards-menus .card-menu .card-content .hover-check .price {
+.main .cards-menus .card-menu .card-content .card2 .price {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   justify-content: center;
   padding-bottom: 12px;
   padding-right: 25px;
@@ -246,7 +242,7 @@ body {
   font-weight: 700;
   color: #353535;
 }
-.main .cards-menus .card-menu .card-content .hover-check .check {
+.main .cards-menus .card-menu .card-content .card2 .check {
   width: 60px;
   background-color: #99E2D0;
   height: 69px;
@@ -255,14 +251,21 @@ body {
   display: flex;
   align-items: center;
   font-size: 31px;
-  padding: 2px;
 }
-.main .cards-menus .card-menu .card-content .hover-check i.fa-circle-check {
+.main .cards-menus .card-menu .card-content .card2 i.fa-circle-check {
   background-color: #99E2D0;
   width: 30px;
   height: 30px;
   border-radius: 20px;
   color: white;
+}
+.main .cards-menus .transition2 {
+  animation: transition 1.5s ease-out 1.5s forwards;
+  opacity: 0;
+}
+.main .cards-menus .transition3 {
+  animation: transition 1.5s ease-out 2.5s forwards;
+  opacity: 0;
 }
 .main .commander-btn {
   display: flex;
@@ -278,8 +281,11 @@ body {
   text-align: center;
   border: none;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 .main .commander-btn .btn:hover {
+  transform: scale(1.2);
   opacity: 0.85;
   cursor: pointer;
 }

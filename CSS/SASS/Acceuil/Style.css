@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* Feuille de style page d'accueil*/
+/***Couleurs***/
 :root {
   --main-color: #9356DC; /* primaire(--main-color) */
   --second-color: #FF79DA; /* secondaire(--second-color) */
@@ -7,6 +9,7 @@
   --title-color: #F6F6F6; /* gris clair */
 }
 
+/****Police****/
 :root {
   --police-principale:"Roboto", sans-serif;
   --police-logo-titre:"shrikhand", sans-serif;
@@ -18,6 +21,7 @@ body {
 
 .main-container {
   margin: 0px;
+  /**Animation chargement de la page**/
 }
 @keyframes loader {
   100% {
@@ -43,7 +47,7 @@ body {
 }
 .main-container .loader {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: white;
@@ -55,7 +59,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 700px;
+  height: 100%;
 }
 @media (max-width: 425px) {
   .main-container .loader .loader__container {
@@ -108,6 +112,7 @@ body {
   animation-delay: 0.8s;
 }
 
+/*En-tête*/
 .logo {
   display: flex;
   justify-content: center;
@@ -185,8 +190,11 @@ body {
   text-align: center;
   border: none;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 .Reservation-btn .btn:hover {
+  transform: scale(1.2);
   opacity: 0.85;
   cursor: pointer;
 }
