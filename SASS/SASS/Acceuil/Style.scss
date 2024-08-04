@@ -189,23 +189,22 @@ body{
     justify-content: center;
     padding-bottom: 40px;
     padding-top: 10px;
+  
     
     .btn {
       border-radius: 25px;
-      padding: 16px 25px;
+      padding: 13px 20px;
       background: linear-gradient(var(--main-color),var(--second-color));
       color: white;
       text-align: center;
       border: none;
-      box-shadow: 0px 2px 5px 0px #00000040;
+      box-shadow: 0px 4px 10px 0px #00000040;
       cursor: pointer;
-      transition: transform 0.3s ease-in-out;
-        
-    }
-    .btn:hover{
-      transform: scale(1.2);
-      opacity:0.85;
-      cursor: pointer;
+      transition: 300ms, box-shadow 300ms;
+      &:hover{
+        opacity: 0.9;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.35);
+      }
     }
   }  
 }
@@ -259,15 +258,24 @@ body{
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
-        box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.15);;
+        box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out 0.1s;
+
+        &:hover{
+          transform: scale(1.05);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.20)
+        }
+        &:hover .hover-violet{
+          color: var(--main-color);
+          cursor:pointer;
+        }
 
           @media (min-width:1024px) {
-            
             align-items: center;
             flex-wrap: nowrap;
             width: 100%;
-            
           }
+        
       }
     
       .btn-number {
@@ -284,12 +292,9 @@ body{
         background-color: var(--main-color);
         border-radius: 40px;
       }
+      /*icone des boutons fonctionnement*/
       .hover-violet {
         color: grey;
-      }
-      .hover-violet:hover{
-        color: var(--main-color);
-        cursor:pointer;
       }
     } 
   }

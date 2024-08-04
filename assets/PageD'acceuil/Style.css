@@ -184,19 +184,18 @@ body {
 }
 .Reservation-btn .btn {
   border-radius: 25px;
-  padding: 16px 25px;
+  padding: 13px 20px;
   background: linear-gradient(var(--main-color), var(--second-color));
   color: white;
   text-align: center;
   border: none;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: 300ms, box-shadow 300ms;
 }
 .Reservation-btn .btn:hover {
-  transform: scale(1.2);
-  opacity: 0.85;
-  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.35);
 }
 
 .Fonctionnement {
@@ -224,6 +223,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0%;
+  /*icone des boutons fonctionnement*/
 }
 @media (min-width: 1024px) {
   .Fonctionnement .Fonctionnement__liste .liste {
@@ -250,6 +250,15 @@ body {
   align-items: center;
   margin-bottom: 20px;
   box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out 0.1s;
+}
+.Fonctionnement .Fonctionnement__liste .liste .__btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.Fonctionnement .Fonctionnement__liste .liste .__btn:hover .hover-violet {
+  color: var(--main-color);
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .Fonctionnement .Fonctionnement__liste .liste .__btn {
@@ -274,10 +283,6 @@ body {
 }
 .Fonctionnement .Fonctionnement__liste .liste .hover-violet {
   color: grey;
-}
-.Fonctionnement .Fonctionnement__liste .liste .hover-violet:hover {
-  color: var(--main-color);
-  cursor: pointer;
 }
 
 .Restaurants {
